@@ -33,6 +33,7 @@ zstyle ':prezto:load' pmodule \
   'git' \
   'utility' \
   'completion' \
+  'syntax-highlighting' \
   'prompt'
 
 #
@@ -78,6 +79,11 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 
 # Set the Pacman frontend.
 # zstyle ':prezto:module:pacman' frontend 'yaourt'
+
+#
+# Syntax Highlighting
+#
+zstyle ':prezto:module:syntax-highlighting' color 'yes'
 
 #
 # Prompt

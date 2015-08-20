@@ -35,7 +35,8 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'fasd' \
   'syntax-highlighting' \
-  'prompt'
+  'prompt' \
+  'tmux'
 
 #
 # Autosuggestions
@@ -181,4 +182,3 @@ zstyle ':prezto:module:prompt' theme 'pure'
 
 # Integrate with iTerm2.
 # zstyle ':prezto:module:tmux:iterm' integrate 'yes'
-

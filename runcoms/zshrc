@@ -9,3 +9,12 @@
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
+
+# Run nvm
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+# Alias for running local npm modules
+alias npm-local='PATH=$(npm bin):$PATH'
+# Resmio alias
+alias vagrantdock='vagrant up --provider=docker --no-parallel'

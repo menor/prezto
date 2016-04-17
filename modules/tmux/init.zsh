@@ -44,7 +44,7 @@ fi
 #
 # Aliases
 #
-
 alias tmuxa="tmux $_tmux_iterm_integration new-session -A"
+alias tmuxk='tmux kill-session -t'
 alias tmuxl='tmux list-sessions'
 alias tmuxs='tmux attach-session -t'

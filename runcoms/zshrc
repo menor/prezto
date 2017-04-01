@@ -10,6 +10,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+# Source iterm shell integration
+source ~/.iterm2_shell_integration.`basename $SHELL`
+
 # Run nvm
 # export NVM_DIR=~/.nvm
 # source $(brew --prefix nvm)/nvm.sh
@@ -19,11 +22,11 @@ fi
 
 export TERM=xterm-256color-italic
 
-# Resmio alias
-alias vagrantdock='vagrant up --provider=docker --no-parallel'
-
 # Applications alias
 alias telegram='/Users/menor/code/tg/bin/telegram-cli -k tg-server.pub'
 wt() { curl http://wttr.in/$1; }
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export PATH="$PATH:`yarn global bin`" # yarn global packages
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

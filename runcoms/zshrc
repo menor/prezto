@@ -18,10 +18,30 @@ alias npm-local='PATH=$(npm bin):$PATH'
 
 alias n='nvim'
 
+# Open and update vim cheatsheet
+alias vimch='nvim ~/Documents/code/cheatsheets/vim.md'
+alias vimcho='gist -o ~/Documents/code/cheatsheets/vim.md'
+alias vimchu='gist -u 41f367cfdab0d1c78e9e4ac03ad590e2 ~/Documents/code/cheatsheets/vim.md'
+
+alias tmuxch='nvim ~/Documents/code/cheatsheets/tmux.md'
+
+# tmux alias
+alias tls='tmux ls'
+alias tas='tmux attach -t'
+alias tns='tmux new-session -s'
+alias tks='tmux kill-session -t'
+
 export TERM=xterm-256color-italic
 
 # Applications alias
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:`yarn global bin`" # yarn global packages
+
+# Android Studio stuff
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+#Java Stuff
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

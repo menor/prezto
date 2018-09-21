@@ -104,3 +104,5 @@ github-init() {
  echo " done."
 }
 
+
+export PATH="$HOME/.cargo/bin:$PATH"

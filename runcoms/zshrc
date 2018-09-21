@@ -13,6 +13,9 @@ fi
 # Source iterm shell integration
 source ~/.iterm2_shell_integration.`basename $SHELL`
 
+# This is to avoid the reattach to user namespace bug
+export DISABLE_AUTO_TITLE=true
+
 # Alias for running local npm modules
 alias npm-local='PATH=$(npm bin):$PATH'
 
@@ -31,11 +34,21 @@ alias tas='tmux attach -t'
 alias tns='tmux new-session -s'
 alias tks='tmux kill-session -t'
 
+# Javascript alias
+alias pkg='cat package.json'
+alias pkgs='cat package.json | jq ".scripts"'
+
 export TERM=xterm-256color-italic
+
+# GO path
+export GOPATH=$HOME/Documents/code/go
 
 # Applications alias
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export PATH="$PATH:`yarn global bin`" # yarn global packages
+
+# z needs this to work
+. /usr/local/etc/profile.d/z.sh
 
 # Android Studio stuff
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -44,4 +57,17 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 #Java Stuff
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home
 
+# Needed for neovim-remote to work
+export PYTHON_HOME=$HOME/Library/Python/3.6/bin
+export PATH=$PATH:$PYTHON_HOME
+export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
+export PATH="/usr/local/opt/gettext/bin:$PATH"
+
+# Alias for neovim Dirs
+export VIMCONFIG=~/.config/nvim
+export VIMDATA=~/.local/share/nvim
+
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# Keybindings
+bindkey "^R" history-incremental-pattern-search-backward

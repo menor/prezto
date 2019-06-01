@@ -11,11 +11,14 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
 fi
 
 # GO path
-export GOPATH=$HOME/Documents/code/go
+# https://medium.com/rungo/working-in-go-workspace-3b0576e0534a
+export GOPATH=$HOME/Documents/code/go:$HOME/Documents/code/go/src/projects
+export GOBIN=$GOPATH/bin
+
+export PATH=$PATH:$GOPATH:$GOBIN
 
 # Applications alias
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export PATH="$PATH:`yarn global bin`" # yarn global packages
 
 # Android Studio stuff
 export ANDROID_HOME=$HOME/Library/Android/sdk
@@ -35,3 +38,4 @@ export PATH="/usr/local/opt/gettext/bin:$PATH"
 export VIMCONFIG=$HOME/.config/nvim
 export VIMDATA=$HOME/.local/share/nvim
 
+# export PATH=/Users/menor/.local/bin

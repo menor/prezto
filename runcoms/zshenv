@@ -9,3 +9,33 @@
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
+
+# GO path
+# https://medium.com/rungo/working-in-go-workspace-3b0576e0534a
+export GOPATH=$HOME/Documents/code/go:$HOME/Documents/code/go/src/projects
+export GOBIN=$GOPATH/bin
+
+export PATH=$PATH:$GOPATH:$GOBIN
+
+# Applications alias
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# Android Studio stuff
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+#Java Stuff
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home
+
+# Needed for neovim-remote to work
+export PYTHON_HOME=$HOME/Library/Python/3.6/bin
+export PATH=$PATH:$PYTHON_HOME
+export NVIM_LISTEN_ADDRESS=/tmp/nvimsocket
+export PATH="/usr/local/opt/gettext/bin:$PATH"
+
+# Shortcuts for neovim Dirs
+export VIMCONFIG=$HOME/.config/nvim
+export VIMDATA=$HOME/.local/share/nvim
+
+# export PATH=/Users/menor/.local/bin

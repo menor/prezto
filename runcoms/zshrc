@@ -16,6 +16,9 @@ source ~/.iterm2_shell_integration.`basename $SHELL`
 # This is to avoid the reattach to user namespace bug
 export DISABLE_AUTO_TITLE=true
 
+# Aliases will now live in this new file
+source "${ZDOTDIR:-$HOME}/.dotfiles/aliases"
+
 # Alias for running local npm modules
 alias npm-local='PATH=$(npm bin):$PATH'
 

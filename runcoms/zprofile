@@ -69,4 +69,10 @@ export PATH="$PATH:`yarn global bin`"
 # Deno
 export PATH="/Users/menor/.deno/bin:$PATH"
 
+# Preview Markdown in the terminal
+# Needs pandoc and lynx to be installed (via homebrew)
+# https://tosbourn.com/view-markdown-files-terminal/
+rmd () {
+  pandoc $1 | lynx -stdin
+}
 source ~/.ada.stuff

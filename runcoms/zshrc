@@ -1,3 +1,5 @@
+# Try this to see if zsh can be faster
+# https://esham.io/2018/02/zsh-profiling
 #
 # Executes commands at the start of an interactive session.
 #
@@ -18,7 +20,7 @@ export DISABLE_AUTO_TITLE=true
 
 # We need this here even if it's different from the one in tmux
 # TODO: Check how to fix the mess with the profiles
-export TERM=xterm-256color-italic
+# export TERM=xterm-256color-italic
 
 # z needs this to work
 . /usr/local/etc/profile.d/z.sh

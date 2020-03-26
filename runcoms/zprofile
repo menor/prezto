@@ -75,4 +75,10 @@ export PATH="/Users/menor/.deno/bin:$PATH"
 rmd () {
   pandoc $1 | lynx -stdin
 }
+
 source ~/.ada.stuff
+
+# BEGIN SNIPPET: Platform.sh CLI configuration
+HOME=${HOME:-'/Users/menor'}
+export PATH="$HOME/"'.platformsh/bin':"$PATH"
+if [ -f "$HOME/"'.platformsh/shell-config.rc' ]; then . "$HOME/"'.platformsh/shell-config.rc'; fi # END SNIPPET

@@ -7,6 +7,10 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
+# temp ada stuff to make java work
+# export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.dotfiles/prezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.dotfiles/prezto/init.zsh"
@@ -33,3 +37,4 @@ bindkey "^R" history-incremental-pattern-search-backward
 if [[ -s "${HOME}/.iterm2_shell_integration.zsh" ]]; then 
   source ~/.iterm2_shell_integration.`basename $SHELL`
 fi
+export PATH="$HOME/.jenv/bin:$PATH"

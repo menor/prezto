@@ -13,7 +13,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/init.zsh" ]]; then
 fi
 
 # Load aliases
-echo $DOTDIR
 [[ -f $DOTDIR/aliases ]] && source $DOTDIR/aliases
 
 # This is to avoid the reattach to user namespace bug

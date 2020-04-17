@@ -7,34 +7,30 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
-# temp ada stuff to make java work
-# export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
-
 # Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.dotfiles/prezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.dotfiles/prezto/init.zsh"
+if [[ -s "${ZDOTDIR:-$HOME}/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/init.zsh"
 fi
 
 # Load aliases
-[[ -f ~/.aliases ]] && source ~/.aliases
+echo $DOTDIR
+[[ -f $DOTDIR/aliases ]] && source $DOTDIR/aliases
 
 # This is to avoid the reattach to user namespace bug
-export DISABLE_AUTO_TITLE=true
+# export DISABLE_AUTO_TITLE=true
 
 # We need this here even if it's different from the one in tmux
 # TODO: Check how to fix the mess with the profiles
 # export TERM=xterm-256color-italic
 
 # z needs this to work
-. /usr/local/etc/profile.d/z.sh
+#. /usr/local/etc/profile.d/z.sh
 
 # Keybindings
 bindkey "^R" history-incremental-pattern-search-backward
 
 # Source iterm shell integration, this needs to go last
 # https://iterm2.com/documentation-shell-integration.html
-if [[ -s "${HOME}/.iterm2_shell_integration.zsh" ]]; then 
-  source ~/.iterm2_shell_integration.`basename $SHELL`
-fi
-export PATH="$HOME/.jenv/bin:$PATH"
+# if [[ -s "${HOME}/.iterm2_shell_integration.zsh" ]]; then 
+#  source ~/.iterm2_shell_integration.`basename $SHELL`
+#fi

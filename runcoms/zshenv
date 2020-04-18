@@ -34,9 +34,7 @@ export VIMDATA=$HOME/.local/share/nvim
 
 # Use .config for as much things as possible
 export GIT_CONFIG=$XDG_CONFIG_HOME/git/config
+export NVM_DIR=$XDG_CONFIG_HOME/.nvm
 
 # Put executables from .dotfiles in PATH
 export PATH=$PATH:$DOTDIR/bin
-
-# Source aliases
-source $DOTDIR/aliases

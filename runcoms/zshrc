@@ -15,12 +15,11 @@ fi
 # Load aliases
 [[ -f $DOTDIR/aliases ]] && source $DOTDIR/aliases
 
+# Load nvm
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
 # This is to avoid the reattach to user namespace bug
 # export DISABLE_AUTO_TITLE=true
-
-# We need this here even if it's different from the one in tmux
-# TODO: Check how to fix the mess with the profiles
-# export TERM=xterm-256color-italic
 
 # z needs this to work
 #. /usr/local/etc/profile.d/z.sh

@@ -15,9 +15,6 @@ fi
 # Load aliases
 [[ -f $DOTDIR/aliases ]] && source $DOTDIR/aliases
 
-# Load nvm
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-
 # This is to avoid the reattach to user namespace bug
 # export DISABLE_AUTO_TITLE=true
 
